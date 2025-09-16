@@ -22,7 +22,7 @@ int main() {
 		hores += quarts / 4;
 		quarts = 0;
 	} else {
-		int quart_inicial = (minut / 15 + ((minut % 15 == 0) ? 0 : 1));
+		int quart_inicial = ( minut + temps%15 )/ 15 ;
 		int quart_final = (quart_inicial + quarts) % 5;
 		int quarts_restants = 4 - quarts;
 		if (quart_final > quart_inicial){
